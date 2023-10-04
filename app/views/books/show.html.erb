@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @book %>
+
+<h1>Readers</h1>
+<ul>
+<% @readers.each do |reader| %>
+  <li>
+  <strong>Reader Name: </strong><%= reader.readername %> <br/>
+   <strong>Comments: </strong><%= reader.comments %>
+
+  </li>
+  <% end %>
+</ul>
+
+<div>
+  <%= link_to "Edit this book", edit_book_path(@book) %> |
+  <%= link_to "Back to books", books_path %>
+
+  <%= button_to "Destroy this book", @book, method: :delete %>
+</div>
