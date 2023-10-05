@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   root "books#index"
   #get 'readers#index'
   #get 'books/show'
-  get 'users/new'
+  #get 'users/new'
 end
